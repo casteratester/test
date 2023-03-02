@@ -10,5 +10,5 @@ spec:
   type: service
   lifecycle: experimental
   owner: devops
-  provideApis: 
+  providesApis: 
     - apis-guru
