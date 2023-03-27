@@ -16,7 +16,9 @@ pipeline {
 
         stage ('Build') {
             steps {
-                def customImage = docker.build("demo.goharbor.io/backstage/busybox:${env.BUILD_ID}")
+                script {
+                    def customImage = docker.build("demo.goharbor.io/backstage/busybox:${env.BUILD_ID}")
+                }
             }
         }
 
