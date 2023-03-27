@@ -4,8 +4,7 @@ metadata:
   name: 'test'
   description: 'this is only a test'
   annotations:
-    jenkins.io/job-full-name: 'backstage/test'
-    backstage.io/techdocs-ref: dir:./sample-open-api.yaml
+    goharbor.io/repository-slug: backstage/busybox
 spec:
   type: service
   lifecycle: experimental
