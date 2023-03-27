@@ -13,5 +13,21 @@ pipeline {
                 '''
             }
         }
+
+        stage ('Build') {
+            steps {
+                def customImage = docker.build("demo.goharbor.io/backstage/busybox:${env.BUILD_ID}")
+            }
+        }
+
+        stage('Publish') {
+            steps{
+                script {
+                    docker.withRegistry('https://demo.goharbor.io', harbor) {
+                        customImage.push()
+                    }
+                }
+            }
+        }
     }
 }
