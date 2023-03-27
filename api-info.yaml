@@ -8,4 +8,4 @@ spec:
   lifecycle: production
   owner: devops
   definition:
-    $openapi: https://api.apis.guru/v2/openapi.yaml
+    $text: https://api.apis.guru/v2/openapi.yaml
