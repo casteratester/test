@@ -3,6 +3,9 @@ pipeline {
     options {
         skipStagesAfterUnstable()
     }
+    environment {
+        customImage = ''
+    }
 
     stages {
 
@@ -17,7 +20,7 @@ pipeline {
         stage ('Build') {
             steps {
                 script {
-                    def customImage = docker.build("demo.goharbor.io/backstage/busybox:${env.BUILD_ID}")
+                    customImage = docker.build("demo.goharbor.io/backstage/busybox:${env.BUILD_ID}")
                 }
             }
         }
@@ -25,7 +28,7 @@ pipeline {
         stage('Publish') {
             steps{
                 script {
-                    docker.withRegistry('https://demo.goharbor.io', harbor) {
+                    docker.withRegistry( 'https://demo.goharbor.io', 'harbor' ) {
                         customImage.push()
                     }
                 }

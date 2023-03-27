@@ -5,7 +5,7 @@ metadata:
   description: 'this is only a test'
   annotations:
     goharbor.io/repository-slug: backstage/busybox
-    jenkins.io/job-full-name: "backstage/test"
+    jenkins.io/github-folder: "backstage/test"
 spec:
   type: service
   lifecycle: experimental
