@@ -6,6 +6,7 @@ metadata:
   annotations:
     goharbor.io/repository-slug: backstage/busybox
     jenkins.io/github-folder: "backstage/test"
+    sonarqube.org/project-key: test
 spec:
   type: service
   lifecycle: experimental
