@@ -11,4 +11,4 @@ spec:
   lifecycle: experimental
   owner: devops
   providesApis: 
-    - apis-guru
+    - petstore
