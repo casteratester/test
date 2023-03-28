@@ -8,4 +8,4 @@ spec:
   lifecycle: production
   owner: devops
   definition:
-    $text: https://petstore.swagger.io/v2/swagger.json
+    $text: https://api.apis.guru/v2/openapi.yaml
